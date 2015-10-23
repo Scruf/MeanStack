@@ -12,4 +12,17 @@ router.route('/posts')
     //tep
     res.send({message:"TODO"});
 });
+router.route('/posts/:id')
+    //returns a particular post
+    .get(function(req,res){
+       res.send({message:"TODO will return post with id"+req.params.id}); 
+    })
+    
+    .put(function(req,res){
+        res.send({message:"Modified post"+req.params.id});
+    })
+    .delete(function(req,res){
+       res.send({message:"Was deleted"+req.params.id}) ;
+    });
+    
 module.exports=router;
